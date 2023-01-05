@@ -1,0 +1,10 @@
+{% extends "main_menu.html" %}
+{% block content %}
+    <h3>{{ item.name }}</h3>
+    {% for tag in item.tags.all %}
+        {{ tag.name }}
+    {% endfor %}
+    <p>{{ item.category.name }}</p>
+    <p>Price: {{ item.price }}$</p>
+    <p>{{ item.description }}</p>
+{% endblock %}
